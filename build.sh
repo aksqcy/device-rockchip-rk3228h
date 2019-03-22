@@ -1,6 +1,6 @@
 #!/bin/bash
 ARCH=arm64
-LUNCH=rk3228h_mid-userdebug
+LUNCH=rk3228h-userdebug
 UBOOT_DEFCONFIG=rk3328_box_defconfig
 KERNEL_DEFCONFIG=rockchip_defconfig
 KERNEL_DTS=rk3328-evb-android

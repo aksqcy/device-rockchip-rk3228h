@@ -13,7 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+add_lunch_combo rk3228h-eng
 add_lunch_combo rk3228h-userdebug
 add_lunch_combo rk3228h-user
-add_lunch_combo rk3228h_mid-userdebug
-add_lunch_combo rk3228h_mid-user
