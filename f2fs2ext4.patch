@@ -1,0 +1,36 @@
+diff --git a/rk3399_box/fstab.rk30board b/rk3399_box/fstab.rk30board
+index 09dab1f..d6a44ff 100755
+--- a/rk3399_box/fstab.rk30board
++++ b/rk3399_box/fstab.rk30board
+@@ -14,4 +14,4 @@
+ # For sdmmc
+ /devices/platform/fe320000.dwmmc/mmc_host*        auto  auto    defaults        voldmanaged=sdcard1:auto,encryptable=userdata
+ # Full disk encryption has less effect on rk3399, so default to enable this.
+-/dev/block/by-name/userdata       /data               f2fs      noatime,nodiratime,nosuid,nodev,discard,inline_xattr,reserve_root=32768,resuid=0,resgid=1000                   wait,check,notrim,formattable,forceencrypt=/metadata/key_file,quota
++/dev/block/by-name/userdata       /data               ext4      noatime,nodiratime,nosuid,nodev,discard,resuid=0,resgid=1000                   wait,check,notrim,formattable,forceencrypt=/metadata/key_file,quota
+diff --git a/rk3399_box/recovery.fstab b/rk3399_box/recovery.fstab
+index ab69841..e923582 100755
+--- a/rk3399_box/recovery.fstab
++++ b/rk3399_box/recovery.fstab
+@@ -7,7 +7,7 @@
+ /dev/block/by-name/oem                   /oem                 ext4             defaults                  defaults
+ /dev/block/by-name/cache                 /cache               ext4             defaults                  defaults
+ /dev/block/by-name/metadata              /metadata            ext4             defaults                  defaults
+-/dev/block/by-name/userdata              /data                f2fs             defaults                  defaults
++/dev/block/by-name/userdata              /data                ext4             defaults                  defaults
+ /dev/block/by-name/cust                  /cust                ext4             defaults                  defaults
+ /dev/block/by-name/custom                /custom              ext4             defaults                  defaults
+ /dev/block/by-name/radical_update        /radical_update      ext4             defaults                  defaults
+diff --git a/rk3399_box/recovery.nand.fstab b/rk3399_box/recovery.nand.fstab
+index c0f0867..737f439 100755
+--- a/rk3399_box/recovery.nand.fstab
++++ b/rk3399_box/recovery.nand.fstab
+@@ -7,7 +7,7 @@
+ /dev/block/rknand_oem                   /oem                 ext4             defaults                  defaults
+ /dev/block/rknand_cache                 /cache               ext4            defaults                  defaults
+ /dev/block/rknand_metadata              /metadata            ext4            defaults                  defaults
+-/dev/block/rknand_userdata              /data                f2fs            defaults                  defaults
++/dev/block/rknand_userdata              /data                ext4            defaults                  defaults
+ /dev/block/rknand_cust                  /cust                ext4            defaults                  defaults
+ /dev/block/rknand_custom                /custom              ext4            defaults                  defaults
+ /dev/block/rknand_radical_update        /radical_update      ext4            defaults                  defaults

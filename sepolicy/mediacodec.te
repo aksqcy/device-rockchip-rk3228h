@@ -1,0 +1,5 @@
+allow mediacodec tee_device:chr_file { open read write ioctl };
+allow mediacodec property_socket:sock_file { write };
+allow mediacodec init:unix_stream_socket { connectto };
+get_prop(mediacodec,use_mpp_prop);
+set_prop(mediacodec, use_mpp_prop);
