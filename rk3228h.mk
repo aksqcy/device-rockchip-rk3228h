@@ -39,4 +39,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.ota.host = www.rockchip.com:2300 \
     ro.sf.lcd_density=280
 
-#PRODUCT_HAVE_OPTEE := true
+PRODUCT_HAVE_OPTEE := true
