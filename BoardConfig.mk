@@ -123,3 +123,11 @@ BOARD_USE_ANDROIDNN := true
 ifeq ($(strip $(BOARD_USE_ANDROIDNN)), true)
 DEVICE_MANIFEST_FILE := device/rockchip/$(TARGET_BOARD_PLATFORM)/manifest.xml
 endif
+
+
+TARGET_RECOVERY_OVERSCAN_PERCENT := 2
+TARGET_BASE_PARAMETER_IMAGE ?= device/rockchip/common/baseparameter/baseparameter_fb720.img
+# savBaseParameter tool
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+    PRODUCT_PACKAGES += saveBaseParameter
+endif
